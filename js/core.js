@@ -161,7 +161,9 @@ Core.init = function(){
     });
     //绑定快捷方式点击事件
     ul.find('li').live('click',function(){
-        Core.create($(this));
+        var sc = $(this).attr('shortcut');
+        window.location=shortcut[sc][3];
+        // Core.create($(this));
     });
     //绑定任务栏点击事件
     $('.task-window li').live('click',function(){
